@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+</head>
+<body>
+
+<header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Volunteer Connect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="opportunities.html">Opportunities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+                            <li><a class="dropdown-item" href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Search form -->
+                <form class="d-flex" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <!-- User authentication links -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <span id="welcomeMessage" class="nav-link"></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" id="loginLink">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutLink" style="display: none;">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+</header>
+
+<main class="container mt-5">
+    <section>
+        <h1 class="text-center">Welcome to Volunteer Connect!</h1>
+        <p class="text-center">Join us in making a difference in our community through exciting volunteer opportunities.</p>
+    </section>
+
+    <!-- Add News Container -->
+    <section id="news" class="mt-5">
+        <h2 class="text-center mb-4">Community News</h2>
+        <div id="newsContainer" class="row">
+            <!-- News articles will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Add Search Results Container -->
+    <section id="searchResults" class="mt-4">
+        <!-- Search results will be displayed here -->
+    </section>
+
+    <!-- Add Search Form if not in navbar -->
+    <form class="d-flex mb-4" role="search" id="searchForm">
+        <div class="input-group">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+            <button class="btn btn-outline-primary" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </form>
+
+    <section class="text-center mt-4">
+        <button id="getInvolvedBtn" class="btn btn-primary">Get Involved</button>
+    </section>
+</main>
+
+<footer class="mt-5 text-center">
+    <p>&copy; 2025 Volunteer Connect. All rights reserved.</p>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">&uarr;</button>
+
+<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script>
+// Update the news fetching function with better error handling
+async function fetchCommunityNews() {
+    const newsContainer = document.getElementById('newsContainer');
+    if (!newsContainer) {
+        console.log('News container not found - this may be normal on pages without news');
+        return;
+    }
+
+    try {
+        const response = await fetch('/api/news');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const news = await response.json();
+        
+        newsContainer.innerHTML = news.map(item => `
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">${item.title}</h5>
+                        <p class="card-text">${item.description}</p>
+                        <a href="${item.link}" class="btn btn-primary" target="_blank">Read More</a>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error fetching news:', error);
+        if (newsContainer) {
+            newsContainer.innerHTML = '<p class="text-danger">Error loading news. Please try again later.</p>';
+        }
+    }
+}
+
+// Update the search handling function
+function handleSearch() {
+    const searchForm = document.getElementById("searchForm");
+    const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
+
+    if (!searchForm || !searchInput || !searchResults) {
+        console.log('Search elements not found - this may be normal on some pages');
+        return;
+    }
+
+    searchForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        // ... rest of search handling code ...
+    });
+}
+
+// Update Back to Top button handling
+function HandleBackToTop() {
+    const backToTopButton = document.getElementById("backToTop");
+    if (!backToTopButton) {
+        console.log('Back to Top button not found - this may be normal on some pages');
+        return;
+    }
+
+    window.addEventListener("scroll", () => {
+        backToTopButton.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
+</script>
+</body>
+</html>

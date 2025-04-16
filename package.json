@@ -1,0 +1,45 @@
+{
+  "name": "volunteer-connect",
+  "version": "1.0.0",
+  "description": "Volunteer Connect SPA",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/servers/server.js",
+    "dev": "nodemon dist/servers/server.js",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
+    "@popperjs/core": "^2.11.8",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^2.2.0",
+    "bootstrap": "^5.3.2",
+    "chart.js": "^4.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "fullcalendar": "^6.1.15",
+    "jquery": "^3.7.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.2",
+    "serve": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/bootstrap": "^5.2.10",
+    "@types/chart.js": "^2.9.41",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^20.0.0",
+    "copyfiles": "^2.4.1",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.0.0"
+  },
+  "author": "Jaskirat <jaskiratsingh.bhogal@dcmail.ca>",
+  "license": "MIT"
+}

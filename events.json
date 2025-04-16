@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Beach Cleanup",
+    "date": "2025-02-15",
+    "time": "09:00 AM",
+    "category": "Environmental",
+    "location": "Central Beach",
+    "description": "Join us to clean the beach and protect marine life."
+  },
+  {
+    "id": 2,
+    "title": "Community Workshop",
+    "date": "2025-02-20",
+    "time": "02:00 PM",
+    "category": "Education",
+    "location": "Community Center",
+    "description": "A workshop to educate children on basic skills."
+  },
+  {
+    "id": 3,
+    "title": "Food Drive Fundraiser",
+    "date": "2025-02-25",
+    "time": "06:00 PM",
+    "category": "Community Support",
+    "location": "Downtown Hall",
+    "description": "Help raise funds and collect donations for the food bank."
+  },
+  {
+    "id": 4,
+    "title": "Tree Planting Event",
+    "date": "2025-03-01",
+    "time": "10:00 AM",
+    "category": "Environmental",
+    "location": "City Park",
+    "description": "Join us in planting trees for a greener future."
+  }
+]

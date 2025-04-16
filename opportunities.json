@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Community Garden Cleanup",
+        "description": "Help maintain and beautify our local community garden. No prior gardening experience required.",
+        "date": "2025-02-15",
+        "time": "09:00 AM - 12:00 PM",
+        "location": "Central Community Park"
+    },
+    {
+        "id": 2,
+        "title": "Senior Center Companionship", 
+        "description": "Spend time with seniors, play games, and provide companionship.",
+        "date": "2025-02-22",
+        "time": "02:00 PM - 04:00 PM",
+        "location": "Sunset Senior Center"
+    },
+    {
+        "id": 3,
+        "title": "Food Bank Sorting",
+        "description": "Help sort and organize donations at our local food bank.",
+        "date": "2025-03-01",
+        "time": "10:00 AM - 01:00 PM",
+        "location": "City Food Bank Warehouse"
+    }
+]

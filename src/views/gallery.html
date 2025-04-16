@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <!-- Include Lightbox CSS -->
+    <link rel="stylesheet" href="node_modules/lightbox2/dist/css/lightbox.min.css">
+</head>
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Volunteer Connect</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="opportunities.html">Opportunities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="/donate">
+                                        <i class="fas fa-gift"></i> Donate
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/statistics">
+                                        <i class="fas fa-gift"></i> Statisticss
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/event-planning">
+                                        <i class="fas fa-gift"></i> Event Planning
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="/privacy">
+                                        <i class="fas fa-shield-alt"></i> Privacy Policy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/terms">
+                                        <i class="fas fa-file-contract"></i> Terms of Service
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <h1 class="text-center">Event Gallery</h1>
+        <div id="galleryContainer" class="row">
+            <!-- Images will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer class="mt-5 text-center">
+        <p>&copy; 2025 Volunteer Connect. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Back to Top">&uarr;</button>
+
+    <!-- Include Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Include Lightbox JS -->
+    <script src="node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+    <!-- Include Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

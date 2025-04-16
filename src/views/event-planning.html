@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planning</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <!-- ... existing navbar code ... -->
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">Event Planning</h1>
+        
+        <!-- Create Event Form -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Create New Event</h3>
+                        <form id="eventPlanningForm" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="eventName" class="form-label">Event Name</label>
+                                <input type="text" class="form-control" id="eventName" required>
+                                <div class="invalid-feedback">Please enter an event name.</div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="eventDate" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="eventDate" required>
+                                    <div class="invalid-feedback">Please select a date.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="eventTime" class="form-label">Time</label>
+                                    <input type="time" class="form-control" id="eventTime" required>
+                                    <div class="invalid-feedback">Please select a time.</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventLocation" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="eventLocation" required>
+                                <div class="invalid-feedback">Please enter a location.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventCategory" class="form-label">Category</label>
+                                <select class="form-select" id="eventCategory" required>
+                                    <option value="">Select a category</option>
+                                    <option value="Environmental">Environmental</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Community Support">Community Support</option>
+                                    <option value="Health">Health</option>
+                                    <option value="Arts & Culture">Arts & Culture</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a category.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventDescription" class="form-label">Description</label>
+                                <textarea class="form-control" id="eventDescription" rows="3" required></textarea>
+                                <div class="invalid-feedback">Please provide a description.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Event</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h3 class="mb-4">Planned Events</h3>
+                <div id="plannedEventsContainer" class="row g-4">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-5 text-center">
+        <p>&copy; 2025 Volunteer Connect. All rights reserved.</p>
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

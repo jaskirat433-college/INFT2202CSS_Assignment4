@@ -1,0 +1,67 @@
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: #f8d7da; /* Light red color for active links */
+}
+
+.navbar .dropdown-menu {
+    background-color: #f8f9fa; /* Light background for dropdown */
+    border-radius: 0.25rem; /* Rounded corners */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f9fa;
+}
+
+/* Statistics Page Styles */
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 300px;
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.statistics-card {
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.chart-title {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Event Planning Page Styles */
+.event-card {
+    transition: transform 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.needs-validation .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.invalid-feedback {
+    display: none;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback {
+    display: block;
+}

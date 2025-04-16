@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Beach Cleanup",
+        "thumbnail": "assets/images/ocg-saving-the-ocean-EPPS6W5LdXs-unsplash.jpg",
+        "fullImage": "assets/images/ocg-saving-the-ocean-EPPS6W5LdXs-unsplash.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Community Workshop",
+        "thumbnail": "assets/images/jo-szczepanska-6qxyVtVB4FE-unsplash.jpg",
+        "fullImage": "assets/images/jo-szczepanska-6qxyVtVB4FE-unsplash.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Food Drive Fundraiser",
+        "thumbnail": "assets/images/pexels-cottonbro-6591147.jpg",
+        "fullImage": "assets/images/pexels-cottonbro-6591147.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Tree Planting Event",
+        "thumbnail": "assets/images/pexels-shvetsa-5029923.jpg",
+        "fullImage": "assets/images/pexels-shvetsa-5029923.jpg"
+    }
+]

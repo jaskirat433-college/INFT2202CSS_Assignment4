@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Volunteer Connect</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <i class="fas fa-hands-helping"></i> Volunteer Connect
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <!-- Main Navigation -->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+                                <i class="fas fa-home"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/opportunities">
+                                <i class="fas fa-hand-holding-heart"></i> Volunteer Now
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/events">
+                                <i class="fas fa-calendar-alt"></i> Events
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">
+                                <i class="fas fa-envelope"></i> Contact Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">
+                                <i class="fas fa-info-circle"></i> About
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Search Form -->
+                    <form class="d-flex me-3" role="search" id="searchForm">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                            <button class="btn btn-outline-primary" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- User Navigation -->
+                    <ul class="navbar-nav">
+                        <!-- User Dropdown (shown when logged in) -->
+                        <li class="nav-item dropdown" id="userDropdown" style="display: none;">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-circle"></i> <span id="userName">User</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="/profile">
+                                        <i class="fas fa-user"></i> Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/statistics">
+                                        <i class="fas fa-chart-bar"></i> Statistics
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/event-planning">
+                                        <i class="fas fa-calendar-plus"></i> Event Planning
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="logoutButton">
+                                        <i class="fas fa-sign-out-alt"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Login Link (shown when logged out) -->
+                        <li class="nav-item" id="loginItem">
+                            <a class="nav-link" href="/login">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- More Dropdown -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-ellipsis-h"></i> More
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="/gallery">
+                                        <i class="fas fa-images"></i> Gallery
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/donate">
+                                        <i class="fas fa-gift"></i> Donate
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/statistics">
+                                        <i class="fas fa-gift"></i> Statistics
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/event-planning">
+                                        <i class="fas fa-gift"></i> Event Planning
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="/privacy">
+                                        <i class="fas fa-shield-alt"></i> Privacy Policy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/terms">
+                                        <i class="fas fa-file-contract"></i> Terms of Service
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>    
+    </header>
+
+    <main id="app" class="container mt-5">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <footer class="mt-5 text-center">
+        <p>&copy; 2025 Volunteer Connect. All rights reserved.</p>
+    </footer>
+
+    <button id="backToTop" title="Back to Top">&uarr;</button>
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
